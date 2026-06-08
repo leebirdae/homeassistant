@@ -1,0 +1,26 @@
+      - buttonmatrix:
+          id: nav_bar
+          align: bottom_mid
+          height: 40
+          y: -10
+          width: 90%
+          text_font: roboto_icons_36
+
+          # This structural block defines the actual button layout
+          rows:
+            - buttons:
+                - id: page_prev
+                  text: "Previous"
+                  on_press:
+                    then:
+                      - lvgl.page.previous
+                - id: page_home
+                  text: "Home"
+                  on_press:
+                    then:
+                      - lvgl.page.show: home_page
+                - id: page_next
+                  text: "Next"
+                  on_press:
+                    then:
+                      - lvgl.page.next

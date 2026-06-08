@@ -1,0 +1,63 @@
+# External icon fonts - auto-generated for icons used in this design
+# ESPHome downloads fonts automatically on first compile
+font:
+  - file:
+      url: "https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.ttf"
+      type: web
+    id: mdi_icons_24
+    size: 24
+    glyphs: [
+      "\U000F033E",  # Lock
+      "\U000F0084",  # Battery Charging
+    ]
+
+lvgl:
+  pages:
+    - id: canvas_1
+      bg_color: 0x111827
+      pad_all: 5
+      widgets:
+        - obj:
+            id: lv_obj_6
+            x: 230
+            y: 110
+            width: 100
+            height: 100
+            bg_color: 0x4F46E5
+            bg_opa: 0%
+            border_width: 1
+            border_color: 0x4B5563
+            radius: 8
+            pad_all: 0
+            widgets:
+              - label:
+                  id: lv_label_7
+                  x: 0
+                  y: 5
+                  width: 98
+                  height: 20
+                  text: "GBR Left"
+                  text_color: ffffff
+                  text_align: CENTER
+                  text_font: montserrat_16
+              - label:
+                  id: lv_icon_8
+                  x: 17
+                  y: 25
+                  width: 65
+                  height: 65
+                  text: "\U000F033E"
+                  text_font: mdi_icons_24
+                  text_align: CENTER
+                  text_color: 0xFFFFFF
+
+        - label:
+            id: lv_icon_9
+            x: 384
+            y: 159
+            width: 48
+            height: 48
+            text: "\U000F0084"
+            text_font: mdi_icons_24
+            text_align: CENTER
+            text_color: 0xFFFFFF

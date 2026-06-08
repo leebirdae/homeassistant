@@ -1,0 +1,157 @@
+- obj:
+          id: lv_nav_sidebar
+          x: 0
+          y: 0
+          width: 200
+          height: 480
+          align: LEFT_MID
+          bg_color: 0x1F2937
+          border_width: 0
+          pad_all: 4
+          # Enable Flex grid behaviors
+          layout: flex
+          flex_flow: row_wrap
+          flex_align_main: space_around
+          flex_align_cross: center
+          flex_align_track: space_around
+
+          children:
+            # ROW 1: Home Button (Full Width)
+            - button:
+                id: btn_home
+                width: 94%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "Home"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.show: home_page
+
+            # ROW 2 - LEFT: Previous Button (Half Width)
+            - button:
+                id: btn_prv
+                width: 45%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "<--"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.previous
+
+            # ROW 2 - RIGHT: Next Button (Half Width)
+            - button:
+                id: btn_nxt
+                width: 45%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "-->"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.next
+
+            # ROW 3: Light Status (Full Width)
+            - button:
+                id: btn_lights
+                width: 94%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "Light Status"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.show: light_status
+
+            # ROW 4: Alarm Status (Full Width)
+            - button:
+                id: btn_4
+                width: 94%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "Alarm Status"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.show: alarm_status
+
+            # ROW 5: CHAOS Status (Full Width)
+            - button:
+                id: btn_5
+                width: 94%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "CHAOS Status"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.show: chaos_status
+
+            # ROW 6: Button 6 (Full Width)
+            - button:
+                id: btn_6
+                width: 94%
+                height: 72
+                bg_color: 0x111827
+                border_color: 0x111827
+                outline_color: 0x111827
+                pressed:
+                  bg_color: 0xdddddd
+                widgets:
+                  - label:
+                      text: "Button 6"
+                      text_font: nav_font
+                      text_color: 0xFFFFFF
+                      align: center
+                on_press:
+                  then:
+                    - lvgl.page.show: room_page
